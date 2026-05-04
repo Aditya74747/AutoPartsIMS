@@ -1,0 +1,5 @@
+out/
+*.class
+AutoPartsIMS.jar
+manifest.txt
+sources.txt
