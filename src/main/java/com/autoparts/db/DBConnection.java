@@ -10,7 +10,7 @@ public class DBConnection {
                                        + "?useSSL=false&allowPublicKeyRetrieval=true"
                                        + "&serverTimezone=Europe/Berlin";
     private static final String USER = "yourusername";
-    private static final String PASS = "yourpassword"; // Change as needed
+    private static final String PASS = "your_password_here"; // Change as needed
 
     public static Connection openConnection() throws SQLException {
         try {

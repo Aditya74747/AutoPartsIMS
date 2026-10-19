@@ -219,19 +219,19 @@ DELIMITER ;
 --   emp3 / Emp9999
 
 INSERT INTO users (username, password, role, full_name, email) VALUES
-('manager1','d3dec3f35387156495cbc21471313f87155f878f3435b693f50077c2be479033','MANAGER', 'Klaus Weber',   'k.weber@mercedes-benz.com'),
-('manager2','2fbc899086ef7067406de3304cd8637196bc948a832ab5fc1075cb54887f3191','MANAGER', 'Sabine Mueller','s.mueller@porsche.com'),
-('emp1',    '8fdb6a96c8fc7b2c5556ed9b19a9fd0249825bdd134074e8d74ce45b48677c8f','EMPLOYEE','Ron Ozturk',    'r.ozturk@mercedes-benz.com'),
-('emp2',    '6c8e6b4f82d92a8d523402aa00fd1cd7ba37bddf28089d7eed99f926e6552eba','EMPLOYEE','Rachel Gunther',  'r.gunther@porsche.com'),
-('emp3',    '7206686340be7d37a3b6e0e304e05788efa8064fdba686947cb98defd31e87c7','EMPLOYEE','Marco Bianchi', 'm.bianchi@mercedes-benz.com');
+('manager1','d3dec3f35387156495cbc21471313f87155f878f3435b693f50077c2be479033','MANAGER', 'Klaus Weber',   'k.weber@mercedes-benz.example.com'),
+('manager2','2fbc899086ef7067406de3304cd8637196bc948a832ab5fc1075cb54887f3191','MANAGER', 'Sabine Mueller','s.mueller@porsche.example.com'),
+('emp1',    '8fdb6a96c8fc7b2c5556ed9b19a9fd0249825bdd134074e8d74ce45b48677c8f','EMPLOYEE','Ron Ozturk',    'r.ozturk@mercedes-benz.example.com'),
+('emp2',    '6c8e6b4f82d92a8d523402aa00fd1cd7ba37bddf28089d7eed99f926e6552eba','EMPLOYEE','Rachel Gunther',  'r.gunther@porsche.example.com'),
+('emp3',    '7206686340be7d37a3b6e0e304e05788efa8064fdba686947cb98defd31e87c7','EMPLOYEE','Marco Bianchi', 'm.bianchi@mercedes-benz.example.com');
 
 -- Initial data for the tables:
 INSERT INTO suppliers (name, contact_name, phone, email, address, country) VALUES
-('Bosch GmbH',         'Hans Fischer', '+49 711 811 0','supply@bosch.de',      'Robert-Bosch-Platz 1, Gerlingen',      'Germany'),
-('Continental AG',     'Maria Schmidt','+49 511 938 0','orders@continental.de','Vahrenwalder Str. 9, Hannover',        'Germany'),
-('ZF Friedrichshafen', 'Peter Braun',  '+49 7541 77 0','supply@zf.com',        'Lowentalerstrasse 20, Friedrichshafen','Germany'),
-('Schaeffler AG',      'Ingrid Koch',  '+49 9132 82 0','info@schaeffler.com',  'Industriestr. 1-3, Herzogenaurach',    'Germany'),
-('Mahle GmbH',         'Thomas Wolf',  '+49 711 501 0','supply@mahle.com',     'Pragstrasse 26-46, Stuttgart',         'Germany');
+('Bosch GmbH',         'Hans Fischer', '+49 000 000 01','supply@bosch.example.com',      'Gerlingen',      'Germany'),
+('Continental AG',     'Maria Schmidt','+49 000 000 02','orders@continental.example.com','Hannover',        'Germany'),
+('ZF Friedrichshafen', 'Peter Braun',  '+49 000 000 03','supply@zf.example.com',        'Friedrichshafen','Germany'),
+('Schaeffler AG',      'Ingrid Koch',  '+49 000 000 04','info@schaeffler.example.com',  'Herzogenaurach',    'Germany'),
+('Mahle GmbH',         'Thomas Wolf',  '+49 000 000 05','supply@mahle.example.com',     'Stuttgart',         'Germany');
 
 INSERT INTO parts (part_number, name, category, unit, description, supplier_id, unit_price) VALUES
 ('WHL-001','Front Wheel Rim 18"',     'WHEELS',       'pcs','Alloy rim for C-Class / Cayenne',  1, 189.99),
@@ -340,16 +340,16 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 -- Suppliers
 INSERT INTO suppliers (name, contact_name, phone, email, address, country, active) VALUES
-('Bosch GmbH',              'Hans Fischer',   '+49 711 811 0',     'supply@bosch.de',           'Robert-Bosch-Platz 1, 70839 Gerlingen',      'Germany',     1),
-('Continental AG',           'Maria Schmidt',  '+49 511 938 0',     'orders@continental.de',     'Vahrenwalder Str. 9, 30165 Hannover',         'Germany',     1),
-('ZF Friedrichshafen AG',   'Peter Braun',    '+49 7541 77 0',     'supply@zf.com',              'Lowentalerstrasse 20, 88046 Friedrichshafen', 'Germany',     1),
-('Schaeffler AG',            'Ingrid Koch',    '+49 9132 82 0',     'procurement@schaeffler.com','Industriestrasse 1, 91074 Herzogenaurach',    'Germany',     1),
-('Mahle GmbH',               'Thomas Wolf',    '+49 711 501 0',     'supply@mahle.com',           'Pragstrasse 26, 70376 Stuttgart',             'Germany',     1),
-('Hella GmbH',               'Klaus Bauer',    '+49 2941 38 0',     'orders@hella.com',           'Rixbecker Strasse 75, 59552 Lippstadt',       'Germany',     1),
-('Valeo SA',                 'Sophie Dupont',  '+33 1 40 55 20 20', 'supply@valeo.com',           '43 Rue Bayen, 75017 Paris',                   'France',      1),
-('Brembo S.p.A.',            'Marco Rossi',    '+39 035 605 3111',  'orders@brembo.com',          'Via Brembo 25, 24035 Curno BG',               'Italy',       1),
-('Bilstein Group',           'Stefan Mueller', '+49 2333 791 0',    'supply@bilstein.de',         'Wilhelmstrasse 239, 58093 Hagen',             'Germany',     1),
-('SKF Group',                'Lars Andersson', '+46 31 337 1000',   'orders@skf.com',             'Hornsgatan 1, 415 50 Gothenburg',             'Sweden',      1);
+('Bosch GmbH',              'Hans Fischer',   '+49 000 000 01',     'supply@bosch.example.com',           '70839 Gerlingen',      'Germany',     1),
+('Continental AG',           'Maria Schmidt',  '+49 000 000 02',     'orders@continental.example.com',     '30165 Hannover',         'Germany',     1),
+('ZF Friedrichshafen AG',   'Peter Braun',    '+49 000 000 03',     'supply@zf.example.com',              '88046 Friedrichshafen', 'Germany',     1),
+('Schaeffler AG',            'Ingrid Koch',    '+49 000 000 04',     'procurement@schaeffler.example.com','91074 Herzogenaurach',    'Germany',     1),
+('Mahle GmbH',               'Thomas Wolf',    '+49 000 000 05',     'supply@mahle.example.com',           '70376 Stuttgart',             'Germany',     1),
+('Hella GmbH',               'Klaus Bauer',    '+49 000 000 06',     'orders@hella.example.com',           '59552 Lippstadt',       'Germany',     1),
+('Valeo SA',                 'Sophie Dupont',  '+33 000 000 07', 'supply@valeo.example.com',           '75017 Paris',                   'France',      1),
+('Brembo S.p.A.',            'Marco Rossi',    '+39 000 000 08',  'orders@brembo.example.com',          '24035 Curno BG',               'Italy',       1),
+('Bilstein Group',           'Stefan Mueller', '+49 000 000 09',    'supply@bilstein.example.com',         '58093 Hagen',             'Germany',     1),
+('SKF Group',                'Lars Andersson', '+46 000 000 10',   'orders@skf.example.com',             '415 50 Gothenburg',             'Sweden',      1);
 
 -- Parts
 INSERT INTO parts (part_number, name, category, unit, description, supplier_id, unit_price) VALUES
